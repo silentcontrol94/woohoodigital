@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+$coreRed : #FF5A5F;
+$corePurple : #914669;
+$coreGreen : #008489;
+$secondaryDarkGrey : #484848;
+$secondaryGrey : #767676;
+$white : #fff;
+$font : 'Roboto', sans-serif;
+$textSize : 14px;
+$headerSize : 24px;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 8px;
+}
+body{
+    font-family: $font;
+}
+@media (min-width: 1600px){
+    .container, .container-lg, .container-md, .container-sm, .container-xl {
+        max-width: 1366px;
+    }
+}
+.main_bg{
+    height: 750px;
+    background: url(../assets/images/hero_bg.png);
+    position: relative;
+}
+header{
+    padding: 14px 24px 0 23px;
+}
+.nav_container{
+    display: flex;
+    justify-content: space-between;
+    .nav_menu{
+        display: flex;
+        list-style: none;
+        margin: 13px 0 5px 0;
+        li{
+            font-size: $textSize;
+            padding-right: 24px;
+            line-height: 1;
+            color: $white;
+            cursor: pointer;
+        }
+    }
+}
+.main_form{
+    position: absolute;
+    width: 391px;
+    height: 508px;
+    top: 132px;
+    left: 80px;
+    background-color: $white;
+    padding: 32px 24px 24px 24px;
+    border-radius: 4px;
+    h1{
+        font-size: 32px;
+        color: $secondaryDarkGrey;
+    }
+    .form_control_row{
+        margin-top: 16px;
+        label{
+            font-size: 12px;
+            font-weight: 700;
+            color: $secondaryDarkGrey;
+            text-transform: uppercase;
+        }
+        input{
+            height: 48px;
+            padding-left: 16px;
+            outline: 0;
+            background: #FFFFFF;
+            border: 1px solid #E3E3E3;
+            box-sizing: border-box;
+            border-radius: 2px;
+            width: 100%;
+            &::placeholder{
+                color: #8F8F8F;
+                font-weight: 400;
+            }
+        }
+        .form_dates{
+            width: 50%;
+        }
+        &.form_button{
+            justify-content: end;
+            display: flex;
+            button{
+                border-radius: 4px;
+                background-color: $coreRed;
+                color: $white;
+                font-weight: 700;
+                text-align: center;
+                margin-left: auto;
+                height: 48px;
+                width: 146px;
+                border: none;
+                &:focus{
+                    outline: 0;
+                }
+            }
+        }
+    }
+}
+.sections{
+    margin: 88px 80px 0 80px;
+    h1{
+        font-weight: 700;
+        font-size: $headerSize;
+        color: $secondaryDarkGrey;
+    }
+    .places{
+        display: flex;
+        filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.15));
+        border-radius: 12px;
+        background-color: $white;
+        width: 391px;
+        margin-top: 24px;
+        div{
+            display: flex;
+            align-items: center;
+            padding-left: 24px;
+        }
+        img{
+            border-top-left-radius: 12px;
+            border-bottom-left-radius: 12px;
+        }
+    }
+    .section_text{
+        font-weight: 300;
+        color: $secondaryDarkGrey;
+        padding-left: 0;
+    }
+    .preview_bg{
+        background-image: url(../assets/images/menu_bg.png);
+        border-radius: 4px;
+        height: 310px;
+        position: relative;
+        .preview_container{
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 65px;
+            left: 50%;
+            transform: translateX(-50%);
+            .preview_button{
+                margin-top: 38px;
+                border-radius: 4px;
+                background-color: $white;
+                font-size: 10px;
+                font-weight: 700;
+                width: 200px;
+                height: 44px;
+                text-transform: uppercase;
+                position: relative;
+                .vektor{
+                    right: 15px;
+                    position: absolute;
+                    top: 15px;
+                }
+            }
+        }
+    }
+}
+.tours_row{
+    .tours{
+        padding-right: 6.5px;
+        padding-left: 6.5px;
+        .tour_bg{
+            width: 100%;
+            object-fit: cover;
+        }
+        img{
+            border-radius: 4px;
+        }
+        .country{
+            font-weight: 700;
+            font-size: 10px;
+            color: $secondaryGrey;
+            text-transform: uppercase;
+            margin-top: 8px;
+        }
+        .tour_info{
+            font-weight: 700;
+            color: $secondaryDarkGrey;
+            margin-top: 4px;
+        }
+        .tour_desc{
+            font-weight: 300;
+            font-size: $textSize;
+            margin-top: 8px;
+        }
+        .tour_rate{
+            color: $coreGreen;
+            font-weight: 700;
+            font-size: 12px;
+            position: relative;
+            img{
+                position: relative;
+                margin-left: 4px;
+            }
+        }
+    }
+}
